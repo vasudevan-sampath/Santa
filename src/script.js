@@ -9,8 +9,8 @@ function listpage()
 }
 function formspage()
 {
-	document.getElementById("forms").style.display = "block";
-	document.getElementById("gform").src = "https://docs.google.com/forms/d/e/1FAIpQLSdU34xgdOiZaG1rjOVDvnrQN1pNhiVN2UCbExkxPFw-cRziHA/viewform?embedded=true";
+    document.getElementById("forms").style.display = "block";
+    document.getElementById("gform").src = "https://docs.google.com/forms/d/e/1FAIpQLSdU34xgdOiZaG1rjOVDvnrQN1pNhiVN2UCbExkxPFw-cRziHA/viewform?embedded=true";
     document.getElementById("initialpage").style.display = "none";
     document.getElementById("k").style.display = "block";
     document.getElementById("variable").innerHTML = 1;
