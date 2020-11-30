@@ -1,39 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title id="Title1"> ISLAND </title>
+	<title id="Title1"> CMP3 </title>
 </head>
-<!--<body background="./../Downloads/talent/bg1.jpg">-->
-<body style="background-color:#FFFF3C;">
+<body style="background-image: url('src/bg5.jpg')"-->
 
  	<script type="text/javascript" src="src/script.js"></script>
- 	<center>     <h1 style="color:#1D418C;"> FUN GAME FOR ISLAND</h1> </center>
+ 	<center>     <h1 style="color:#FFFF3C;margin-bottom:100px">SECRET SANTA</h1> </center>
 
-	<center id="c" style="display:none;">
-	<table style="height:300px;margin-top:100px;text-align:middle; vertical-align:middle;">
-	<tr id="images">
-		<td id="td1"><img id="img1" style="height:250px;object-fit:cover;"></td>
-		
-	</tr>
-    </table>
-    <div id="d">
-			<label for="Answer" style="font-size:30px;">Full Name:</label>
-			<input type="text" id="Answer" style="font-size:20px; background-color:#FFE400" autofocus><br /><br />
-			<input id="sub" type="submit" value="Submit" style="background-color:#14A76C;color:#272727;font-size:20px;" onclick="validate()">
-			<br /><br />
-			<p id ="out"></p>
-			<br />
-			<input id="next" type="submit" value="Next Question" style="background-color:#14A76C;color:#272727;font-size:20px;display:none;" onclick="nextqn()">			
+	<div id ="initialpage">
+	<div style="width:750px;margin:auto;font-size: 20px; color: #FFFF3C;">
+		<p>We are getting ready to play a game of Secret Santa ! </p>
+		<p>Here are the guidelines :</p>
+		<p>1. You will get a chit with one of the team member's name - you will be the Secret Santa for that person.</p>
+		<p>2. Every day, please make it fun by sending an anonymous note to that person. The note can highlight something funny about that person's statements, some funny anecdotes about him/her, some tasks, or something totally unrelated - like a joke from the internet, a comic strip like Dilbert or some facts that the person can read and enjoy.</p>
+		<p>3. We will start this on  and end it on Dec .</p> 
+		<p>4. On Dec 20th, we will meet together and the Secret Santa comes forward and announces the person's name for whom they played Santa and will give him/her a gift.</p>
+		<p>5. The gift given by Secret Santa should not exceed a value of Rs.500 and preferably not lower than Rs.400. This is to ensure that it does not become a burden and at the same time both giver and receiver shouldn't feel they gave a good gift but didn't receive similarly.</p>
+
 	</div>
+	<center>
+	<table style="height:300px;margin-top:100px;text-align:middle; vertical-align:middle;">
+	<tr>
+		<td id="td1"><input id="t" type="submit" value="Give a Task" style="background-color:transparent; color:#f5ec42;font-size:32px;border-radius:4px;margin-bottom: 80px;" onclick="formspage()"></td>
+	</tr>
+<!-- 	<tr>
+		<td id="td2"><input id="r" type="submit" value="GO to Task List" style="background-color:transparent;color:#f5ec42;font-size:32px;border-radius:4px;margin-bottom: 80px;" onclick="listpage()"></td>		
+	</tr> -->
+    </table>
 	</center> 
+    </div>
 
-<br />
-<br />
-<br />
-<div id="h" style="color:#1D418C;">
-	<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdU34xgdOiZaG1rjOVDvnrQN1pNhiVN2UCbExkxPFw-cRziHA/viewform?embedded=true" width="640" height="649" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-</div>
-<div style="margin-left:300px;margin-top:50px;"><b><h2>Let's Have some Fun :)</h2></b></div>
-<center><input id="k" type="submit" value="GO" style="background-color:#14A76C;color:#272727;font-size:32px;border-radius:4px;" onclick="page1()"></center>
+  <center>
+  <div id="forms" style="color:#1D418C;margin-top:50px;display:none;">
+	<iframe id="gform" width="640" height="649" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+	
+	<script type="text/javascript">
+	  document.getElementById('gform').onload = function()
+	  {
+	  	var load = document.getElementById("variable").innerHTML;
+	  	load++; 
+        document.getElementById("variable").innerHTML = load;
+        if(load == 3) listpage();
+       }
+	</script>
+
+  </div>
+  </center>
+
+  <center><input id="k" type="submit" value="Go to Home" style="background-color:#14A76C;color:#272727;font-size:32px;border-radius:4px;margin-bottom: 80px;display:none;" onclick="gotoHomePage()"></center>
+  <div id="variable">0</div>
 </body>
 </html>
