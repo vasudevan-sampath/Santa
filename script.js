@@ -23,3 +23,7 @@ function gotoHomePage()
    document.getElementById("sand").style = "background-image: url('src/bg7.jpg');background-size :100vw 100vh";
 }
 
+function Mailaddresspage()
+{
+  window.location = "https://docs.google.com/spreadsheets/d/1_zC_nSkj6fDh61T9z2yr6Ez9KY2rmDcix_kh65Qo-rA/edit?usp=sharing";
+}
